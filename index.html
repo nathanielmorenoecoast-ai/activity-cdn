@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student static website for a CDN verification lab.">
+  <title>CDN Lab | Nathaniel Moreno</title>
+  <style>
+    :root { color-scheme: light; --navy: #123a63; --blue: #1976d2; --pale: #eaf4ff; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: Arial, Helvetica, sans-serif; color: #17324d;
+      background: linear-gradient(135deg, #eaf4ff, #f7fbff);
+      min-height: 100vh; display: grid; place-items: center; padding: 24px;
+    }
+    main {
+      width: min(900px, 100%); background: white; border-radius: 18px;
+      overflow: hidden; box-shadow: 0 16px 45px rgba(18,58,99,.15);
+    }
+    header { padding: 28px 24px; text-align: center; color: white; background: var(--navy); }
+    header h1 { margin: 0 0 10px; font-size: clamp(1.8rem, 4vw, 2.7rem); }
+    header p { margin: 0; opacity: .92; }
+    .hero-image { display: block; width: 100%; height: 300px; object-fit: cover; }
+    section { padding: 26px; }
+    h2 { color: var(--navy); margin-top: 0; }
+    .meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .pill { background: var(--pale); border: 1px solid #c9e2ff; padding: 10px 14px; border-radius: 999px; }
+    footer { padding: 18px 24px; background: #f2f7fc; color: #52687c; text-align: center; font-size: .9rem; }
+    code { background: #eef3f8; padding: 2px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Welcome to My CDN Lab Website</h1>
+      <p>A static webpage deployed to the cloud</p>
+    </header>
+    <img class="hero-image"
+      src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=85"
+      alt="Sunlit mountain landscape">
+    <section>
+      <h2>Hello, I'm Nathaniel Moreno!</h2>
+      <p>This website is part of my CDN Verification Lab. A Content Delivery Network (CDN) helps deliver website files from distributed servers closer to visitors.</p>
+      <div class="meta">
+        <div class="pill"><strong>Student:</strong> Nathaniel Moreno</div>
+        <div class="pill"><strong>Student ID:</strong> 2400372</div>
+        <div class="pill"><strong>Activity:</strong> CDN Verification</div>
+        <div class="pill"><strong>Browser:</strong> Google Chrome</div>
+        <div class="pill"><strong>Timestamp:</strong> <time id="timestamp">Loading…</time></div>
+      </div>
+    </section>
+    <footer>Static HTML page • HTTPS and CDN delivery will depend on the hosting platform</footer>
+  </main>
+  <script>
+    document.getElementById("timestamp").textContent =
+      new Date().toLocaleString(undefined, { dateStyle: "medium", timeStyle: "medium" });
+  </script>
+</body>
+</html>
